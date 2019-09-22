@@ -83,7 +83,7 @@ int main(int argc, char **argv) {
   }
 
   printf("TESTING: max(%d,%d,%d): ", x, z, x);
-  result = max(x, z, x)
+  result = max(x, z, x);
   if(result != 30) {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
