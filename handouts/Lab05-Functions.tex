@@ -57,7 +57,7 @@
 \SetupFloatingEnvironment{listing}{listname=List of Code Samples}
 
 \title{CSCE 155 - C}
-\subtitle{Lab 05 - Functions}
+\subtitle{Lab 5.0 - Functions}
 \author{Dr.\ Chris Bourke}
 \date{~}
 
@@ -191,14 +191,23 @@ element.  It does so by calling a series of functions.
 \subsubsection*{Instructions}
 
 \begin{enumerate}
-  \item Complete question 1 on your worksheet.
-  \item Open the \mintinline{text}{orderStatistic.c} source file and
-	study the code (do not make any changes).  In particular, read
-	the prototypes for each function and their documentation to
-	learn what each one does.  
-  \item Compile and run the program with the following input values: \\
-	\mintinline{text}{./[nameOfTheProgram] 4 99 23 76 100 8 3 0 1 72 104 1000 12 18 14}
-  \item Answer the relevant questions on your worksheet.
+  \item Manually compile the order statistics program:
+  \begin{enumerate}
+    \item Compile the order statistics ``library'' using the following: \\
+    \mintinline{text}{gcc -c -std=gnu99 orderStatistics.c} 
+    
+    The \mintinline{text}{-c} flag tells gcc to compile (without linking)
+    which produces an \emph{object} file \mintinline{text}{orderStatistics.o}.
+    This is not an executable program, but contains compiled code of
+    the functions in \mintinline{text}{orderStatistics.c}
+    \item Compile your executable and \emph{link} it to this ``library''
+    using the following: \\
+    \mintinline{text}{gcc orderStatistics.o orderStatisticsDemo.c}
+  \end{enumerate}
+  \item Run the program with the following input values and verify
+  that it is correct: \\
+	\mintinline{text}{./a.out 4 99 23 76 100 8 3 0 1 72 104 1000 12 18 14}
+  \item Complete questions 1 and 2 on your worksheet.
 \end{enumerate}
 
 \subsection{Writing Functions}
@@ -304,7 +313,7 @@ other functions.  You should write at least 1 test case for
 \emph{each} function you wrote.  
 
 To compile (without linking, since your code will have no 
-mintinline{c}{main()} function) you can use 
+\mintinline{c}{main()} function) you can use 
 
 \mintinline{text}{gcc -c colorUtils.c}
 
