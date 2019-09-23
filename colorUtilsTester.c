@@ -83,7 +83,7 @@ int main(int argc, char **argv) {
   }
 
   printf("TESTING: max(%d,%d,%d): ", x, z, x);
-  result = max(x, z, x)
+  result = max(x, z, x);
   if(result != 30) {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
@@ -116,6 +116,17 @@ int main(int argc, char **argv) {
   printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
   result = toGrayScaleAverage(r, g, b);
   if(result != 85) {
+    printf("FAILED: toGrayScaleAverage returned %d, expected 85\n", result);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+  
+  r = 100, g = 39, b = 40;
+  printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleAverage(r, g, b);
+  if(result != 59) {
     printf("FAILED: toGrayScaleAverage returned %d, expected 85\n", result);
     numFailed++;
   } else {

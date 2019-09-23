@@ -1,0 +1,11 @@
+
+
+int max(int x, int y, int z) {
+  int m = x > y ? x : y;
+  m = m > z ? m : z;
+  return m;
+}
+
+int toGrayScaleAverage(int r, int g, int b) {
+  return (r + g + b) / 3;
+}

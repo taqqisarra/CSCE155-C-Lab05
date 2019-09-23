@@ -257,22 +257,30 @@ the valid RGB color range.
 
 \subsubsection*{Instructions}
 
-Design and write the functions below.  Place your documentation and 
-prototypes into \mintinline{text}{colorUtils.h} and place your function 
-definitions into \mintinline{text}{colorUtils.c}.  You can build the 
-entire project using \mintinline{text}{make} which produces an executable 
-named \mintinline{text}{imageDriver} that you can run to test your 
-functions on an image of your choice.
+Design and write a ``color utilities'' library by implementing the 
+functions described below.  In particular:
+\begin{itemize}
+  \item Place your prototypes and documentation in the file
+  \mintinline{text}{colorUtils.h}
+  \item Place your function definitions in the file 
+  \mintinline{text}{colorUtils.c}.  
+  \item Your color library functions are used in an image manipulation
+  program (already written for you) that converts images to 
+  gray scale/sepia.  To build your library and this program we've
+  provided a \mintinline{text}{makefile} which defines the rules
+  and dependencies required to build the project.  From the command
+  line, simply type \mintinline{text}{make} and it will produce an
+  executable called \mintinline{text}{imageDriver}.  Run the program
+  to determine how to use it to test your functions.
+\end{itemize}
+
+We've provided starter code with two functions already completed for
+you.  Implement the following functions:
 
 \begin{itemize}
-  \item Write two helper functions that will return the minimum and the
-  maximum of 3 integers.  Name your functions \mintinline{c}{min} and
-  \mintinline{c}{max} respectively.
+  \item Write a helper function that returns the \emph{minimum}
+  of 3 integers.  Name your function \mintinline{c}{min}.
   
-  \item Write a function that takes three integer values (RGB values) and
-  uses the averaging technique to return the gray-scale value.  
-  Name your function \mintinline{c}{toGrayScaleAverage}
-
   \item Write a function that takes three integer values (RGB values) and
   uses the lightness technique to return the gray-scale value.  
   Name your function \mintinline{c}{toGrayScaleLightness}
@@ -294,7 +302,7 @@ Testing is a fundamental step in software development.  The most common types
 of tests are \emph{unit tests} and the most common ``unit'' is a function.
 You may have already ``tested'' your functions by running the project and 
 viewing the resulting images.  However, for your final activity, you will
-write some informal unit tests to test your functions more rigorously.  
+write more automatable unit tests to test your functions more rigorously.  
 
 Some starter unit testing code has already been provided in 
 \mintinline{text}{colorUtilsTester.c}.  Each block of code calls a function
@@ -307,14 +315,12 @@ Using this starter code as an example, add more test cases for the
 other functions.  You should write at least 1 test case for 
 \emph{each} function you wrote.  
 
-To compile (without linking, since your code will have no 
-\mintinline{c}{main()} function) you can use 
+To compile this tester you can use the same make file and the
+following:
 
-\mintinline{text}{gcc -c colorUtils.c}
+\mintinline{text}{make colorUtilsTester}
 
-Then to compile the test driver program, use
-
-\mintinline{text}{gcc -o colorUtilsTester colorUtils.c colorUtilsTester.c}
+which produces an executable program called \mintinline{text}{colorUtilsTester}
 
 \section{Advanced Activity (Optional)}
 
