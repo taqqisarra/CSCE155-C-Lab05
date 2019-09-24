@@ -126,7 +126,8 @@ int main(int argc, char **argv) {
   r = 100, g = 39, b = 40;
   printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
   result = toGrayScaleAverage(r, g, b);
-  if(result != 59) {
+  //TODO: this test case will fail, why?
+  if(result != 60) {
     printf("FAILED: toGrayScaleAverage returned %d, expected 85\n", result);
     numFailed++;
   } else {
