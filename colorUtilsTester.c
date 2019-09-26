@@ -9,6 +9,7 @@ int main(int argc, char **argv) {
   int r, g, b;
   int x = 10, y = 20, z = 30;
   int result;
+  int expectedResult;
   int numPassed = 0;
   int numFailed = 0;
 
@@ -113,10 +114,11 @@ int main(int argc, char **argv) {
   }
 
   r = 255, g = 0, b = 0;
+  expectedResult = 85;
   printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
   result = toGrayScaleAverage(r, g, b);
-  if(result != 85) {
-    printf("FAILED: toGrayScaleAverage returned %d, expected 85\n", result);
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleAverage returned %d, expected %d\n", result, expectedResult);
     numFailed++;
   } else {
     printf("PASSED\n");
@@ -124,11 +126,12 @@ int main(int argc, char **argv) {
   }
   
   r = 100, g = 39, b = 40;
+  expectedResult = 60
   printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
   result = toGrayScaleAverage(r, g, b);
   //TODO: this test case will fail, why?
-  if(result != 60) {
-    printf("FAILED: toGrayScaleAverage returned %d, expected 85\n", result);
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleAverage returned %d, expected %d\n", result, expectedResult);
     numFailed++;
   } else {
     printf("PASSED\n");
