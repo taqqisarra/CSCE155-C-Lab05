@@ -324,10 +324,23 @@ which produces an executable program called \mintinline{text}{colorUtilsTester}
 
 \section{Advanced Activity (Optional)}
 
-Write a few more functions in the \mintinline{c}{orderStatistics.c} program.  First,
-write a function that gets the \emph{median} of a list of elements.  However, the
-function should \emph{not} make changes to the array.  Instead, write additional
-functions that create a \emph{copy} of the array and sorts the copy so that it can
-find the median element.  
+Large projects require even more abstraction and tools to manage 
+source code and specify how it gets built.  One tool to facilitate this 
+is a program called Make which uses makefiles--specifications for 
+which pieces of code depend on other pieces and how all pieces 
+get built and combined to build an executable program (or collection 
+of executables).  The use of modern IDEs has made the build process 
+much more manageable, but make is still widely used.  Several 
+useful tutorials exist describing how makefiles can be defined and 
+used.
+\begin{itemize}
+  \item \url{http://www.opussoftware.com/tutorial/TutMakefile.htm}
+  \item \url{http://mrbook.org/tutorials/make/}
+\end{itemize}
+We have provided a makefile for this lab.  Read through the tutorials
+above and then read through the makefile and understand how it works.
+Write your own makefile for your next assignment to simplify the
+compilation process.
+
 
 \end{document}
