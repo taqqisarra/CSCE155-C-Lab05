@@ -1,6 +1,10 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<math.h>
+/**
+ * This program performs several ad-hoc unit
+ * tests on the color utils library.
+ */
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
 
 #include "colorUtils.h"
 
