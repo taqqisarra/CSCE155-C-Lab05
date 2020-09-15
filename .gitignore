@@ -32,3 +32,10 @@ figures/_minted*
 
 #
 .DS_Store
+
+# object files
+*.o
+
+# executables
+imageDriver
+colorUtilsTester
