@@ -42,9 +42,6 @@ questions.
   and function definitions were placed into a separate source file.
   Identify at least one advantage of this approach.
 
-3. Demonstrate your final color utility program and testing 
-file to a lab instructor, have them sign this worksheet and 
-turn it in.
 
 
 
