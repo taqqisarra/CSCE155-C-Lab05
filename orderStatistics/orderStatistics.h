@@ -15,3 +15,9 @@ void insertionSort(int *arr, int n);
  * the given integer array (arr) which has n elements
  */
 int getOrderStatistic(int *arr, int n, int i);
+
+/**
+ * Returns the maximum value in the given array (arr)
+ * of n elements.
+ */
+int getMax(int *arr, int n);

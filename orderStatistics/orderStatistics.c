@@ -27,3 +27,7 @@ int getOrderStatistic(int *arr, int n, int i) {
   insertionSort(arr, n);
   return arr[i-1];
 }
+
+int getMax(int *arr, int n) {
+  return getOrderStatistic(arr, n, n-1);
+}
