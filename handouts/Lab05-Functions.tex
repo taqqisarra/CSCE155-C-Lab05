@@ -276,13 +276,36 @@ functions described below.  In particular:
   \mintinline{text}{colorUtils.c}.  
   \item Your color library functions are used in an image manipulation
   program (already written for you) that converts images to 
-  gray scale/sepia.  To build your library and this program we've
-  provided a \mintinline{text}{makefile} which defines the rules
-  and dependencies required to build the project.  From the command
-  line, simply type \mintinline{text}{make} and it will produce an
-  executable called \mintinline{text}{imageDriver}.  Run the program
-  to determine how to use it to test your functions.
+  gray scale/sepia.  
+  
+  As software projects become more complex, the commands, rules, 
+  and order that you compile
+  files becomes complex.  A makefile codifies these rules and 
+  automatically builds your entire project with a single command.
+  
+  We've provided a \mintinline{text}{makefile} which defines the rules
+  and dependencies required to build the image manipulation 
+  program. From the command line, simply type 
+  
+  \mintinline{text}{make} 
+  
+  and it will produce an
+  executable called \mintinline{text}{imageDriver}.  
+  
+  \item Run the \mintinline{text}{imageDriver} program on the images
+  we've provided as part of the project, or you can upload your own
+  images and play around with this program.  If your functions
+  are correctly, the image conversion should look something like 
+  Figure \ref{fig:imageComparisons}.
 \end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.20]{../memorialStadium}
+\includegraphics[scale=0.20]{../memorialStadiumSepia}
+\caption{Memorial Stadium.  Original image (left) and Sepia-toned image (right).}
+\label{fig:imageComparisons}
+\end{figure}
 
 We've provided starter code with two functions already completed for
 you.  Implement the following functions:
