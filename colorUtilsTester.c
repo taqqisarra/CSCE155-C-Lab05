@@ -8,14 +8,47 @@
 
 #include "colorUtils.h"
 
+#define DELTA 0.0001
+
+/**
+ * This function returns true if the two given
+ * values a, b are within DELTA of each other.
+ */
+int isClose(double a, double b);
+
 int main(int argc, char **argv) {
 
-  int r, g, b;
+  int r, g, b, c;
   int x = 10, y = 20, z = 30;
   int result;
   int expectedResult;
+  double expectedD, actualD;
   int numPassed = 0;
   int numFailed = 0;
+
+  c = 123;
+  expectedD = 0.4823;
+  printf("TESTING: rgbIntToFloat(%d): ", c);
+  actualD = rgbIntToFloat(c);  
+  if(!isClose(expectedD, actualD)) {
+    printf("FAILED: returned %f, expected %f\n", actualD, expectedD);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+  c = 53;
+  expectedD = 0.2078;
+  printf("TESTING: rgbIntToFloat(%d): ", c);
+  actualD = rgbIntToFloat(c);
+  if(!isClose(expectedD, actualD)) {
+    printf("FAILED: returned %f, expected %f\n", actualD, expectedD);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
   printf("TESTING: max(%d,%d,%d): ", x, y, z);
   result = max(x, y, z);
@@ -128,7 +161,7 @@ int main(int argc, char **argv) {
     printf("PASSED\n");
     numPassed++;
   }
-  
+
   r = 100, g = 39, b = 40;
   expectedResult = 60;
   printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
@@ -150,4 +183,8 @@ int main(int argc, char **argv) {
 
   return 0;
 
+}
+
+int isClose(double a, double b) {
+  return (fabs(a-b) < DELTA);
 }
