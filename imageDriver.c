@@ -22,6 +22,9 @@ int main(int argc, char **argv) {
   } else {
     fprintf(stderr, "Usage: %s inputFileName outputFileName [mode]\n", argv[0]);
     fprintf(stderr, "       mode: 1 = Average (default), 2 = Lightness, 3 = Luminosity, 4 = Sepia]\n");
+    fprintf(stderr, "\n");
+    fprintf(stderr, "Example: \n");
+    fprintf(stderr, "  %s memorialStadium.jpg memorialStadiumSepia.jpg 4\n", argv[0]);
     exit(1);
   }
 
