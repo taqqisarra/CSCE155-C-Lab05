@@ -39,3 +39,6 @@ figures/_minted*
 # executables
 imageDriver
 colorUtilsTester
+
+# solution
+solution/
