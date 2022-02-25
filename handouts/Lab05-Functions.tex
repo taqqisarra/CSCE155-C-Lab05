@@ -250,8 +250,9 @@ the most prominent and least prominent colors:
 The luminosity technique uses a weighted average to account for a human 
 perceptual preference toward green, setting all three values to:
   $$0.21 r + 0.72 g + 0.07 b$$
-In all three cases, the integer values should be \emph{rounded} rather 
-than truncated.
+
+\textbf{Note}: in all three cases, the final value should be
+\emph{rounded} before being returned (\emph{not} truncated).
 
 A sepia filter sets different values to each of the three RGB components 
 using the following formulas.  Given a current $(r,g,b)$ value, the sepia
@@ -261,8 +262,8 @@ $$\begin{array}{ll}
   g' &= 0.349r + 0.686g + 0.168b \\
   b' &= 0.272r + 0.534g + 0.131b
 \end{array}$$
-As with the gray-scale techniques, values should be rounded.  Moreover, if
-any of the values exceeds 255, they should be reset to 255 to stay within
+As with the gray-scale techniques, the final values should be rounded.  
+Moreover, if any of the values exceeds 255, they should be reset to 255 to stay within
 the valid RGB color range.
 
 \subsubsection*{Instructions}
