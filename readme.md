@@ -229,7 +229,7 @@ Testing is a fundamental step in software development. The most common
 types of tests are *unit tests* and the most common "unit" is a
 function. You may have already "tested" your functions by running the
 project and viewing the resulting images. However, for your final
-activity, you will write more automatable unit tests to test your
+activity, you will write more automated unit tests to test your
 functions more rigorously.
 
 Some starter unit testing code has already been provided in
@@ -240,7 +240,7 @@ the user and the total number of passed/failed test cases is reported.
 
 Using this starter code as an example, add more test cases for the other
 functions. You should write at least 1 test case for *each* function you
-wrote.  In total, your output should have XX passing test cases.
+wrote.  In total, your output should have at least 18 passing test cases.
 
 To compile this tester you can use the same make file and the following:
 
