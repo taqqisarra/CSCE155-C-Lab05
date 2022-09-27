@@ -1,3 +1,7 @@
+/**
+ * A collection of utility functions to manipualte RGB
+ * values of an image
+ */
 
 /**
  * Scales the given rgb integer component (on the
