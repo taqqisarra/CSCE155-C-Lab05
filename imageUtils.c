@@ -120,9 +120,12 @@ void imageToGrayScaleLuminosity(Pixel **image, int height, int width) {
 void imageToSepia(Pixel **image, int height, int width) {
   for(int i=0; i<height; i++) {
     for(int j=0; j<width; j++) {
-      image[i][j].red   = toSepiaRed(image[i][j].red, image[i][j].green, image[i][j].blue);
-      image[i][j].green = toSepiaGreen(image[i][j].red, image[i][j].green, image[i][j].blue);
-      image[i][j].blue  = toSepiaBlue(image[i][j].red, image[i][j].green, image[i][j].blue);
+      int red   = image[i][j].red;
+      int green = image[i][j].green;
+      int blue  = image[i][j].blue;
+      image[i][j].red   = toSepiaRed(red, green, blue);
+      image[i][j].green = toSepiaGreen(red, green, blue);
+      image[i][j].blue  = toSepiaBlue(red, green, blue);
     }
   }
   return;
