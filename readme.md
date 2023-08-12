@@ -258,11 +258,11 @@ which produces an executable program called `colorUtilsTester`
 
     -   `colorUtilsTester.c`
 
-    through the handin and verify your program compiles and runs using
-    the grader.
+    Be sure your program passes all tests to get credit.
 
-2.  Even if you worked with a partner, you *both* should turn in all
-    files.
+2.  Even if you worked with a partner, you are *both* required
+    to submit all files.
+
 
 # Advanced Activity (Optional)
 
