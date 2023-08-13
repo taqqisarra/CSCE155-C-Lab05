@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 
 #include "colorUtils.h"
 
@@ -18,6 +19,17 @@ int isClose(double a, double b);
 
 int main(int argc, char **argv) {
 
+  int reportPass = 0;
+  if(argc == 2) {
+    printf("Usage: %s [-reportPass] - optional argument to report number of passing test cases as the exit code.", argv[0]);
+    if( strcmp(argv[1], "-reportPass") == 0) {
+      reportPass = 1;
+    } else {
+      printf("ERROR: invalid command line argument: %s\n", argv[1]);
+      exit(1);
+    }
+  }
+
   int r, g, b, c;
   int x = 10, y = 20, z = 30;
   int result;
@@ -29,7 +41,7 @@ int main(int argc, char **argv) {
   c = 123;
   expectedD = 0.4823;
   printf("TESTING: rgbIntToFloat(%d): ", c);
-  actualD = rgbIntToFloat(c);  
+  actualD = rgbIntToFloat(c);
   if(!isClose(expectedD, actualD)) {
     printf("FAILED: returned %f, expected %f\n", actualD, expectedD);
     numFailed++;
@@ -181,7 +193,11 @@ int main(int argc, char **argv) {
   printf("Number Test Cases Failed: %6d\n", numFailed);
   printf("Percent Passed:           %6.2f\n", 100.0 * numPassed / (numPassed + numFailed));
 
-  return 0;
+  if(reportPass) {
+    return numPassed;
+  } else {
+    return numFailed;
+  }
 
 }
 
