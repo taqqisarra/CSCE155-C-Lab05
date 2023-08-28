@@ -187,7 +187,11 @@ int main(int argc, char **argv) {
     numPassed++;
   }
 
-  //TODO: add your test cases here
+  //TODO: add your test cases here:
+  //      -at least one for each function
+  //        toGrayScaleLightness(), toGrayScaleLuminosity(),
+  //        toSepiaRed(), toSepiaGreen(), toSepiaBlue()
+  //       for at least 5 and a total of at least 19
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);

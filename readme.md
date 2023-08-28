@@ -239,8 +239,8 @@ they match, the test passes, if not it fails. A message is printed to
 the user and the total number of passed/failed test cases is reported.
 
 Using this starter code as an example, add more test cases for the other
-functions. You should write at least 1 test case for *each* function you
-wrote.  In total, your output should have at least 18 passing test cases.
+functions. You should write *at least* 1 test case for *each* function you
+wrote.  In total, your output should have at least 19 passing test cases.
 
 To compile this tester you can use the same make file and the following:
 
